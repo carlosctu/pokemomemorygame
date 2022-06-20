@@ -1,6 +1,14 @@
 let cards = [];
 let cardsNumber = Number(prompt("Com quantas cartas gostaria de jogar?"));
-let gif = [`<img src="img/jiggly.gif" alt="jiggly">`,`<img src="img/pikachu.gif" alt="pikachu">`,`<img src="img/psyduck.gif" alt="psyduck">`,`<img src="img/slowpo.gif" alt="slowpo">`,`<img src="img/squirtle.gif" alt="squirtle">`,`<img src="img/squirtle_water.gif" alt="squirtle_water">`,`<img src="img/pikapika.gif" alt="pikapika">`]
+let gif = [
+  `<img src="img/jiggly.gif" alt="jiggly">`,
+  `<img src="img/pikachu.gif" alt="pikachu">`,
+  `<img src="img/psyduck.gif" alt="psyduck">`,
+  `<img src="img/slowpo.gif" alt="slowpo">`,
+  `<img src="img/squirtle.gif" alt="squirtle">`,
+  `<img src="img/squirtle_water.gif" alt="squirtle_water">`,
+  `<img src="img/pikapika.gif" alt="pikapika">`,
+];
 // Embaralhando o array de gifs
 shuffleGifs(gif);
 let tableGame = document.querySelector(".container");
@@ -32,7 +40,7 @@ function verifyCards() {
   }
 }
 function setTable() {
-  layout(cardsNumber)
+  layout(cardsNumber);
   cardsNumber = cardsNumber / 2;
   for (let i = 0; i < cardsNumber; i++) {
     for (let j = 0; j < 2; j++) {
@@ -96,7 +104,6 @@ function verifySelectedCards(element) {
         .querySelector(".front-face")
         .classList.remove("front-flip");
       parentFirstCard.querySelector(".back-face").classList.remove("back-flip");
-
       element.querySelector(".front-face").classList.remove("front-flip");
       element.querySelector(".back-face").classList.remove("back-flip");
       // Destravando o click após desvirar as cartas
@@ -112,11 +119,11 @@ function endGame() {
     setTimeout(function () {
       if (min == 0) {
         alert(
-          `Você ganhou em ${plays} jogadas e num tempo de ${seg} segundos!`
+          `Parabéns! Você ganhou em ${plays} jogadas e num tempo de ${seg} segundos!`
         );
       } else {
         alert(
-          `Você ganhou em ${plays} jogadas e num tempo de ${min} min e ${seg} seg!`
+          `Parabéns! Você ganhou em ${plays} jogadas e num tempo de ${min} min e ${seg} seg!`
         );
       }
       // Parando o setInterval()
@@ -129,15 +136,17 @@ function endGame() {
   }
 }
 function reset() {
-  let answer = prompt("Gostaria de reiniciar a partida? (Caso positivo digite 'sim')");
-  
-    if (answer == null || answer.toLowerCase() !== "sim"){
-      clicks = true;
-      alert("Obrigado por jogar!");
-    } else{
-      answer.toLowerCase()
-      location.reload();
-    }
+  let answer = prompt(
+    "Gostaria de reiniciar a partida? (Caso positivo digite 'sim')"
+  );
+
+  if (answer == null || answer.toLowerCase() !== "sim") {
+    clicks = true;
+    alert("Obrigado por jogar!");
+  } else {
+    answer.toLowerCase();
+    location.reload();
+  }
 }
 
 // Timer
@@ -159,19 +168,19 @@ function verifyTimer() {
 function layout(cardsNumber) {
   switch (cardsNumber) {
     case 6:
-      document.querySelector(".container").classList.add("container-6")
+      document.querySelector(".container").classList.add("container-6");
       break;
     case 8:
-      document.querySelector(".container").classList.add("container-8")
+      document.querySelector(".container").classList.add("container-8");
       break;
     case 10:
-      document.querySelector(".container").classList.add("container-10")
+      document.querySelector(".container").classList.add("container-10");
       break;
     case 12:
-      document.querySelector(".container").classList.add("container-12")
+      document.querySelector(".container").classList.add("container-12");
       break;
     case 14:
-      document.querySelector(".container").classList.add("container-14")
+      document.querySelector(".container").classList.add("container-14");
       break;
     default:
       break;
@@ -179,6 +188,6 @@ function layout(cardsNumber) {
 }
 
 // Embaralha o Array de Gif
-function shuffleGifs(gif){
-  gif.sort(()=> Math.random() - 0.5);
+function shuffleGifs(gif) {
+  gif.sort(() => Math.random() - 0.5);
 }
