@@ -32,11 +32,11 @@ setTable();
 function verifyCards() {
   while (cardsNumber < 4 || cardsNumber > 14) {
     alert("Favor escolher um número entre 4 a 14.");
-    cardsNumber = prompt("Com quantas cartas gostaria de jogar?");
+    cardsNumber = Number(prompt("Com quantas cartas gostaria de jogar?"));
   }
   while (cardsNumber % 2 !== 0 || cardsNumber == 0) {
     alert("Favor escolher um número par ou diferente de zero.");
-    cardsNumber = prompt("Com quantas cartas gostaria de jogar?");
+    cardsNumber = Number(prompt("Com quantas cartas gostaria de jogar?"));
   }
 }
 function setTable() {
@@ -169,18 +169,23 @@ function layout(cardsNumber) {
   switch (cardsNumber) {
     case 6:
       document.querySelector(".container").classList.add("container-6");
+      document.querySelector("body").classList.add("body-6");
       break;
     case 8:
       document.querySelector(".container").classList.add("container-8");
+      document.querySelector("body").classList.add("body-8");
       break;
     case 10:
       document.querySelector(".container").classList.add("container-10");
+      document.querySelector("body").classList.add("body-10");
       break;
     case 12:
       document.querySelector(".container").classList.add("container-12");
+      document.querySelector("body").classList.add("body-12");
       break;
     case 14:
       document.querySelector(".container").classList.add("container-14");
+      document.querySelector("body").classList.add("body-14");
       break;
     default:
       break;

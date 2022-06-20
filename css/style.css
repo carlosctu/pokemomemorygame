@@ -130,13 +130,43 @@ body > h1 {
 @media (max-width: 650px) {
   body {
     background: 
+    url("https://i.pinimg.com/564x/a6/fb/b0/a6fbb041b02852e21fbe3e31107e526c.jpg");
+    background-size: cover;
+  }
+  .body-6{
+    background: url("https://i.pinimg.com/564x/a6/fb/b0/a6fbb041b02852e21fbe3e31107e526c.jpg") top no-repeat,
+    url("https://i.pinimg.com/564x/d7/74/eb/d774ebdeb1ec2ccb974ddc68553ae933.jpg") bottom no-repeat;
+    background-size: contain ;
+  }
+  .body-8{
+    background: url("https://i.pinimg.com/564x/a6/fb/b0/a6fbb041b02852e21fbe3e31107e526c.jpg") top no-repeat,
+    url("https://i.pinimg.com/564x/d7/74/eb/d774ebdeb1ec2ccb974ddc68553ae933.jpg") bottom no-repeat,
+    url("https://i.pinimg.com/564x/22/d6/b6/22d6b6804d56cd3ee5157967c8a43d0b.jpg") 50% 38%;
+    background-size: contain ;
+  }
+  .body-10{
+    background: url("https://i.pinimg.com/564x/a6/fb/b0/a6fbb041b02852e21fbe3e31107e526c.jpg") top no-repeat,
+    url("https://i.pinimg.com/564x/d7/74/eb/d774ebdeb1ec2ccb974ddc68553ae933.jpg") bottom no-repeat;
+    background-size: contain ;
+  }
+  .body-12{
+    background:
+    url("https://i.pinimg.com/564x/a6/fb/b0/a6fbb041b02852e21fbe3e31107e526c.jpg") top no-repeat,
+    url("https://i.pinimg.com/564x/d7/74/eb/d774ebdeb1ec2ccb974ddc68553ae933.jpg") bottom no-repeat,
+    url("https://i.pinimg.com/564x/86/29/4b/86294b031008741d72463ea296712e70.jpg") center no-repeat,
+    url("https://i.pinimg.com/564x/22/d6/b6/22d6b6804d56cd3ee5157967c8a43d0b.jpg") 15% 19% no-repeat,
+    url("https://i.pinimg.com/564x/22/d6/b6/22d6b6804d56cd3ee5157967c8a43d0b.jpg") 15% 30.5% ;
+    background-size: contain ;
+  }
+  .body-14 {
+    background: 
     url("https://i.pinimg.com/564x/a6/fb/b0/a6fbb041b02852e21fbe3e31107e526c.jpg") top no-repeat,
     url("https://i.pinimg.com/564x/d7/74/eb/d774ebdeb1ec2ccb974ddc68553ae933.jpg") bottom no-repeat,
     url("https://i.pinimg.com/564x/86/29/4b/86294b031008741d72463ea296712e70.jpg") center no-repeat,
     url("https://i.pinimg.com/564x/22/d6/b6/22d6b6804d56cd3ee5157967c8a43d0b.jpg") 15% 20% no-repeat,
     url("https://i.pinimg.com/564x/22/d6/b6/22d6b6804d56cd3ee5157967c8a43d0b.jpg") 25% 38% ;
-    /* linear-gradient(#2c3e50, #bdc3c7), */
     background-size: contain ;
+  }
   }
   body > h1 {
     width: 312px;
