@@ -1,5 +1,5 @@
 let cards = [];
-let cardsNumber = Number(prompt("Com quantas cartas gostaria de jogar?"));
+let cardsNumber = Number(prompt("Com quantas cartas gostaria de jogar? (Escolha um número par entre 4 e 14)"));
 let gif = [
   `<img src="img/jiggly.gif" alt="jiggly">`,
   `<img src="img/pikachu.gif" alt="pikachu">`,
@@ -119,11 +119,11 @@ function endGame() {
     setTimeout(function () {
       if (min == 0) {
         alert(
-          `Parabéns! Você ganhou em ${plays} jogadas e num tempo de ${seg} segundos!`
+          `Parabéns! Você ganhou em ${plays} jogadas em um tempo de ${seg} segundos!`
         );
       } else {
         alert(
-          `Parabéns! Você ganhou em ${plays} jogadas e num tempo de ${min} min e ${seg} seg!`
+          `Parabéns! Você ganhou em ${plays} jogadas em um tempo de ${min} min e ${seg} seg!`
         );
       }
       // Parando o setInterval()
